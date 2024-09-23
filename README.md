@@ -5,4 +5,4 @@ Possible idea: Data analysis of the effects of technology on eyesight.
 Data Source:
 https://ieeexplore.ieee.org/document/10076795
 
-info for participation
+Looking for how the hours spent using devices impacts power.
