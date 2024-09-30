@@ -6,3 +6,9 @@ Data Source:
 https://ieeexplore.ieee.org/document/10076795
 
 Looking for how the hours spent using devices impacts power.
+
+Found a dataset as part of a project:
+
+https://www.kaggle.com/code/faizalkarim/pytorch-eye-disease-classification-93-7
+
+
