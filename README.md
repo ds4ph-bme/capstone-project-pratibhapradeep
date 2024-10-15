@@ -11,3 +11,4 @@ Found a dataset as part of a project:
 
 https://www.kaggle.com/code/faizalkarim/pytorch-eye-disease-classification-93-7
 
+I plan on using openai/MMMLU from Hugging Face for the optional class activity
