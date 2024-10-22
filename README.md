@@ -46,8 +46,8 @@ CNN was chosen for its strength in identifying patterns in the data. The model w
 
 Loss function: CrossEntropyLoss
 Optimizer: Adam with a learning rate of 0.001
-Final Accuracy: 98.57%
-Loss Plot: The model's loss decreased steadily during training, from 1.6 to 0.17 over 200 epochs.
+Final Accuracy: 99.29%
+Loss Plot: The model's loss decreased steadily during training over 200 epochs.
 
 ### Random Forest Classifier
 Random Forest was chosen due to its ability to handle structured data and generate feature importance insights. The model used 10 estimators with a maximum depth of 10.
