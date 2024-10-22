@@ -70,7 +70,7 @@ Cross-Validation Accuracy: 73.39%
 
 ## Results & Evaluation
 ### CNN
-Final Accuracy: 98.57%
+Final Accuracy: 99.29%
 Confusion Matrix: The CNN struggled with certain classes due to imbalances in the data.
 
 Precision/Recall:
