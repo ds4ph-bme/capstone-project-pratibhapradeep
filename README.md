@@ -1,6 +1,7 @@
 ## User Behavior Classification Using CNN, Random Forest, and Logistic Regression
 
-.mp4
+## Video:
+https://github.com/user-attachments/assets/d0e6a826-65f7-4bd4-b5da-c1eaede05232
 
 
 ## Project Overview
