@@ -104,22 +104,27 @@ Model Comparison: The CNN's superior performance shows the advantage of deep lea
 
 ### Limitations
 
-Class Imbalance: The dataset has imbalanced classes, which affected the models’ ability to accurately classify certain groups. This could be addressed with techniques like SMOTE or class weighting.
+Overfitting Risk: The Random Forest model achieved perfect accuracy on the test data, which suggests that it may have overfitted to the data. Overfitting occurs when a model captures not just the underlying patterns but also the noise in the training data, leading to overly optimistic results on test data that is similar to the training data. This model might perform less well when evaluated on a completely new dataset.
 
-Overfitting: The Random Forest achieved 100% accuracy, indicating overfitting. Limiting tree depth or using more cross-validation folds may improve generalization.
+Limited Dataset: The dataset used in this project may not be diverse enough to represent all potential variations in user behavior. A more extensive and varied dataset would provide a better assessment of how well the models can generalize to unseen data.
 
-Feature Correlation: Several features, such as App Usage Time and Data Usage, are highly correlated. More advanced feature selection techniques could reduce redundancy.
+Class Imbalance: While the dataset appears balanced in terms of the number of instances per class, real-world mobile usage datasets often contain imbalanced classes, where certain types of user behaviors dominate. If such imbalance existed, it could affect model performance, leading to biases towards more frequent classes.
 
-Model Complexity: The CNN performed well but was computationally intensive. Simpler models may offer similar accuracy with less overhead.
-
-Interpretability: While the Random Forest provides some feature importance, the CNN model lacks interpretability. Adding explainability techniques could improve understanding of model decisions.
-
-Generalization: The models were trained on a single dataset, so testing on more diverse data could ensure better real-world performance.
+Simplistic Feature Set: The features used for prediction, such as app usage time, data usage, and age, are relatively simple. There might be other latent factors influencing user behavior that are not captured by these features, such as interaction patterns, app categories, or usage context (e.g., location, time of day).
 
 ### Future Improvements
 
-Future analyses could explore more advanced techniques to address class imbalance, such as using Synthetic Minority Over-sampling Technique (SMOTE) or other resampling methods. Additionally, other deep learning architectures beyond CNN, such as LSTMs, could be tested, particularly if time-series or sequential data is included in future datasets. Another avenue for future exploration could involve feature engineering to derive more meaningful insights from the raw data or incorporating external datasets to improve prediction accuracy.
+Add Regularization and Tuning: To reduce overfitting, we could apply regularization techniques such as pruning in decision trees, adjusting hyperparameters like max_depth, or using cross-validation to fine-tune the model’s complexity. For the Random Forest model, reducing the number of trees or limiting the depth of each tree might help prevent overfitting.
 
+Introduce Ensemble Learning: While we already used Random Forest, further ensemble techniques like Gradient Boosting or XGBoost could offer better performance by reducing variance and bias, potentially improving generalization to unseen data. These models can also offer more flexibility with regularization.
+
+Explore Neural Networks Further: While the CNN performed well, deep learning models can also be prone to overfitting, especially on small datasets. Adding dropout layers or applying early stopping could help prevent overfitting. Additionally, experimenting with more complex architectures (e.g., LSTM for sequential patterns in time-based data) could provide better results if mobile data with a temporal component is available.
+
+Feature Engineering: We could explore additional features that provide richer information about user behavior. For example, interactions between users and specific apps or clustering of similar behaviors could be valuable. More advanced techniques, such as dimensionality reduction using PCA, could also help simplify the feature space.
+
+Gather More Data: Expanding the dataset with more diverse examples of mobile behavior would allow us to better understand how these models generalize to new data. We could also simulate realistic data with more variability, which would help the models learn patterns that are more representative of real-world mobile usage.
+
+Evaluate Other Metrics Beyond Accuracy: Given that overfitting could be an issue, accuracy alone might not be the best indicator of model performance. In future analyses, it would be beneficial to focus more on metrics such as precision, recall, and F1-score for different classes. In particular, the classification report from models like Logistic Regression highlights the importance of evaluating performance across all classes, not just based on overall accuracy.
 ## Running the Code
 Prerequisites
 Python 3.x
